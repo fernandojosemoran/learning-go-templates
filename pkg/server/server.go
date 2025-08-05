@@ -38,7 +38,7 @@ func middlewares(next http.Handler, middlewares []http.HandlerFunc) http.Handler
 func (s HttpServer) Start() {
 	startHandlers(s.Handlers)
 
-	logger.Info("🚀 Server running on http://127.0.0.1:3000")
+	logger.Info(fmt.Sprintf("🚀 Server running on http://127.0.0.1:%d", s.Port))
 
 	err := http.ListenAndServe(
 		fmt.Sprintf(":%d", s.Port),

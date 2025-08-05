@@ -3,3 +3,6 @@
 temp
 *.txt
 .air.toml
+go.sum
+docker-compose.yml
+
